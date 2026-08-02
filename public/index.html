@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KALIJERRY DN42 Peering</title>
+    <meta name="description" content="DN42 peering information for KALIJERRY, AS4242423987.">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header>
+      <h1><a href="/">KALIJERRY.DN42</a> Peering Information</h1>
+      <p>KALIJERRY (<code>AS4242423987</code>) is open for DN42 peering.</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>Requirements</h2>
+        <ul>
+          <li>WireGuard tunnel with BGP over IPv4, IPv6, or both.</li>
+          <li>ROA/RPKI validation on your side is preferred.</li>
+          <li>Please do not send default routes.</li>
+          <li>Accepted DN42 ranges: <code>10.0.0.0/8</code>, <code>172.20.0.0/14</code>, and <code>fd00::/8</code>.</li>
+          <li>Send your ASN, node location, WireGuard public key, endpoint, tunnel IPs, and optional BGP password.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Global Information</h2>
+        <table class="dot-table">
+          <tbody>
+            <tr><td>ASN</td><td><code>AS4242423987</code></td></tr>
+            <tr><td>IPv4 Prefix</td><td><code>172.20.130.0/27</code></td></tr>
+            <tr><td>IPv6 Prefix</td><td><code>fd3a:7c91:5e2b::/48</code></td></tr>
+            <tr><td>Contact</td><td><a href="mailto:kalijerrycn@gmail.com">kalijerrycn@gmail.com</a></td></tr>
+            <tr><td>Registry Maintainer</td><td><code>KALIJERRY-MNT</code></td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>Nodes</h2>
+
+        <section class="node">
+          <h3>hytron-hk1 (Hong Kong)</h3>
+          <p>Recommended for peers in Hong Kong, Taiwan, Singapore, Japan, Korea, and mainland China.</p>
+          <table class="dot-table">
+            <tbody>
+              <tr><td>Status</td><td><strong class="ok">Active</strong></td></tr>
+              <tr><td>Public IPv4 / IPv6</td><td>IPv4 available / IPv6 available</td></tr>
+              <tr><td>WireGuard Endpoint</td><td><code>hy-hk1.kalijerry.uk:51820</code></td></tr>
+              <tr><td>Endpoint IPv4</td><td><code>82.152.166.5:51820</code></td></tr>
+              <tr><td>Endpoint IPv6</td><td><code>[2401:b60:e015:33::2]:51820</code></td></tr>
+              <tr><td>WireGuard Public Key</td><td><code>U7vE9s6ZHhq/5z8HjrqKpoOgZPaU0XK4ad0HT7JDEnw=</code></td></tr>
+              <tr><td>DN42 IPv4</td><td><code>172.20.130.1</code></td></tr>
+              <tr><td>DN42 IPv6</td><td><code>fd3a:7c91:5e2b::1</code></td></tr>
+              <tr><td>WireGuard MTU</td><td><code>1380</code></td></tr>
+              <tr><td>BGP Software</td><td>BIRD 2</td></tr>
+              <tr><td>Comment</td><td>Primary DN42 router.</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="node muted">
+          <h3>Future Nodes</h3>
+          <p>More regions may be added later. This page is structured for multiple nodes, so new servers can be appended without changing the peering format.</p>
+          <table class="dot-table">
+            <tbody>
+              <tr><td>Status</td><td><strong>Planned</strong></td></tr>
+              <tr><td>Regions</td><td>To be announced.</td></tr>
+              <tr><td>Peering</td><td>Please use <code>hytron-hk1</code> for now.</td></tr>
+            </tbody>
+          </table>
+        </section>
+      </section>
+
+      <section>
+        <h2>Route Policy</h2>
+        <table class="dot-table">
+          <tbody>
+            <tr><td>IPv4 Export</td><td><code>172.20.130.0/27</code></td></tr>
+            <tr><td>IPv6 Export</td><td><code>fd3a:7c91:5e2b::/48</code></td></tr>
+            <tr><td>IPv4 Import</td><td><code>10.0.0.0/8</code>, <code>172.20.0.0/14</code></td></tr>
+            <tr><td>IPv6 Import</td><td><code>fd00::/8</code></td></tr>
+            <tr><td>Default Routes</td><td>Not accepted and not exported.</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>Example Request</h2>
+        <p>You can send a peering request using this template.</p>
+        <div class="copy-row">
+          <button type="button" data-copy-target="request-template">Copy</button>
+        </div>
+        <pre id="request-template"><code>Hello, I would like to peer with KALIJERRY / AS4242423987.
+
+My ASN:
+My node location:
+My WireGuard public key:
+My endpoint:
+My tunnel IPv4:
+My tunnel IPv6:
+BGP password, if any:
+Preferred KALIJERRY node: hytron-hk1
+</code></pre>
+      </section>
+
+      <section>
+        <h2>Local Configuration Template</h2>
+        <p>This is the local BIRD format used on KALIJERRY routers. Peer-specific values are filled after agreement.</p>
+        <div class="copy-row">
+          <button type="button" data-copy-target="bird-template">Copy</button>
+        </div>
+        <pre id="bird-template"><code>protocol bgp peer_name_v4 from dn42_peer {
+  neighbor 172.20.x.y as 424242xxxx;
+  source address 172.20.130.1;
+  password "optional-bgp-md5-password";
+}
+
+protocol bgp peer_name_v6 from dn42_peer {
+  neighbor fdxx:xxxx:xxxx::peer as 424242xxxx;
+  source address fd3a:7c91:5e2b::1;
+  password "optional-bgp-md5-password";
+}
+</code></pre>
+      </section>
+    </main>
+
+    <footer>
+      <p>Last updated for <code>AS4242423987</code>. Hosted on Cloudflare Workers.</p>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
