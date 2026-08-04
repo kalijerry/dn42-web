@@ -6,12 +6,14 @@
       "name": "ovh-pl",
       "asn": "AS4242423987",
       "location": "Poland",
+      "endpoint": "ovh-pl.kalijerry.uk:51820",
+      "endpoint_ipv4": "145.239.90.226",
       "dn42_ipv4": "172.20.130.2",
       "dn42_ipv6": "fd3a:7c91:5e2b::2",
       "wireguard_public_key": "uwIrmqLN27GkZ6IZi5hmhNQDGYsDnhtQV0Sen5YFZRc=",
       "listen_port": 51820,
       "transit": true,
-      "status": "Planned"
+      "status": "WireGuard config generated"
     }
   ],
   "connections": [
