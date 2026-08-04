@@ -11,10 +11,15 @@
   "endpoint_ipv4": "v4.hkg01.edge.r1.tmpfs.dev",
   "endpoint_ipv6": "v6.hkg01.edge.r1.tmpfs.dev",
   "wireguard_public_key": "aC9pjzMWZhbA/sLPljUFGU1K28MSopHbKNj5yyv4uzg=",
+  "local_wireguard_public_key": "jBz3sfAdWtqx4cjAQ5JXVnfrdcAupYp5fJCOMiJrEQg=",
+  "local_listen_port": 51821,
+  "local_tunnel_ipv6": "fe80::3987/128",
+  "peer_tunnel_ipv6": "fe80::3987:3310/128",
+  "local_endpoint": "hy-hk1.kalijerry.uk:51821",
   "mtu": 1420,
   "bandwidth": "1 Gbps",
   "bgp": "MP-BGP with Extended Next Hop",
   "tunnel_ipv4": null,
   "tunnel_ipv6": null,
-  "notes": "Awaiting tunnel addresses from automated peering workflow."
+  "notes": "MP-BGP with Extended Next Hop; local WireGuard interface is pending peer-side authorization."
 }
