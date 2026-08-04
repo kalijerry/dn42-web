@@ -29,6 +29,15 @@ const renderConnections = async () => {
 
 renderConnections();
 
+fetch("./peers/infra-status.json", { cache: "no-store" })
+  .then((response) => response.json())
+  .then((status) => {
+    const target = document.getElementById("infra-status");
+    if (!target || !status.updated_at) return;
+    target.textContent = `Infrastructure deploy: ${status.status} (${new Date(status.updated_at).toLocaleString()})`;
+  })
+  .catch(() => {});
+
 copyButtons.forEach((button) => {
   button.addEventListener("click", async () => {
     const target = document.getElementById(button.dataset.copyTarget);

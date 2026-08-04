@@ -1,0 +1,28 @@
+name: Sync infrastructure status
+
+on:
+  repository_dispatch:
+    types: [infra_deployed]
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Write deployment status
+        env:
+          RUN_ID: ${{ github.event.client_payload.run_id }}
+          SHA: ${{ github.event.client_payload.sha }}
+          STATUS: ${{ github.event.client_payload.status }}
+        run: |
+          node -e 'const fs=require("fs"); const value={status:process.env.STATUS,run_id:Number(process.env.RUN_ID),infra_commit:process.env.SHA,updated_at:new Date().toISOString()}; fs.mkdirSync("public/peers",{recursive:true}); fs.writeFileSync("public/peers/infra-status.json",JSON.stringify(value,null,2)+"\n")'
+      - name: Commit status
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add public/peers/infra-status.json
+          git diff --cached --quiet || git commit -m "Sync infrastructure deployment status"
+          git push
