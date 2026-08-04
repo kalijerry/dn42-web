@@ -14,6 +14,19 @@
       "listen_port": 51820,
       "transit": true,
       "status": "WireGuard config generated"
+    },
+    {
+      "name": "aiyun178277605987",
+      "asn": "AS4242423987",
+      "location": "Europe (unconfirmed)",
+      "endpoint": "82.139.194.175:51820",
+      "dn42_ipv4": "172.20.130.3",
+      "dn42_ipv6": "fd3a:7c91:5e2b::3",
+      "wireguard_public_key": "p1fZTFQyd8lkmm2Zn+PlF2iPN5WaPl65yKmHiMEbHjE=",
+      "listen_port": 51820,
+      "transit": true,
+      "origin": false,
+      "status": "Established"
     }
   ],
   "connections": [
