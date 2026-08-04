@@ -1,0 +1,20 @@
+{
+  "asn": "AS4242423310",
+  "name": "HKG-01",
+  "network": "tmpfs",
+  "location": "Hong Kong SAR, China",
+  "facility": "AS906 DMIT Cloud Services",
+  "contact": "noc@tmpfs.dev",
+  "status": "open-automated",
+  "transport": "wireguard",
+  "endpoint": "hkg01.edge.r1.tmpfs.dev:20041",
+  "endpoint_ipv4": "v4.hkg01.edge.r1.tmpfs.dev",
+  "endpoint_ipv6": "v6.hkg01.edge.r1.tmpfs.dev",
+  "wireguard_public_key": "aC9pjzMWZhbA/sLPljUFGU1K28MSopHbKNj5yyv4uzg=",
+  "mtu": 1420,
+  "bandwidth": "1 Gbps",
+  "bgp": "MP-BGP with Extended Next Hop",
+  "tunnel_ipv4": null,
+  "tunnel_ipv6": null,
+  "notes": "Awaiting tunnel addresses from automated peering workflow."
+}
