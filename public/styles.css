@@ -127,6 +127,18 @@ li + li { margin-top: 6px; }
   font-weight: 650;
 }
 
+.connections-table th {
+  padding: 9px 10px;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.connections-table td:first-child {
+  width: auto;
+}
+
 .ok { color: var(--ok); }
 
 .copy-row {
@@ -162,4 +174,5 @@ footer {
   .dot-table td { display: block; width: 100%; padding-left: 0; padding-right: 0; }
   .dot-table td:first-child { width: 100%; padding-bottom: 0; }
   .dot-table td + td { border-top: 0; padding-top: 2px; }
+  .connections-table thead { display: none; }
 }

@@ -1,0 +1,33 @@
+{
+  "node": "hytron-hk1",
+  "local_asn": "AS4242423987",
+  "connections": [
+    {
+      "peer": "g-load HK1",
+      "asn": "AS4242423914",
+      "location": "Hong Kong",
+      "transport": "WireGuard",
+      "bgp": "IPv6 link-local",
+      "status": "Established",
+      "website": "https://dn42.g-load.eu/"
+    },
+    {
+      "peer": "tmpfs HKG-01",
+      "asn": "AS4242423310",
+      "location": "Hong Kong",
+      "transport": "WireGuard",
+      "bgp": "MP-BGP / Extended Next Hop",
+      "status": "Pending key update",
+      "website": null
+    },
+    {
+      "peer": "IEDON HKG Route Collector",
+      "asn": "AS4242422189",
+      "location": "Hong Kong",
+      "transport": "WireGuard",
+      "bgp": "MP-BGP / Extended Next Hop",
+      "status": "Pending authorization",
+      "website": "https://grc-hk.iedon.net"
+    }
+  ]
+}
