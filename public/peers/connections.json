@@ -1,6 +1,19 @@
 {
   "node": "hytron-hk1",
   "local_asn": "AS4242423987",
+  "nodes": [
+    {
+      "name": "ovh-pl",
+      "asn": "AS4242423987",
+      "location": "Poland",
+      "dn42_ipv4": "172.20.130.2",
+      "dn42_ipv6": "fd3a:7c91:5e2b::2",
+      "wireguard_public_key": "uwIrmqLN27GkZ6IZi5hmhNQDGYsDnhtQV0Sen5YFZRc=",
+      "listen_port": 51820,
+      "transit": true,
+      "status": "Planned"
+    }
+  ],
   "connections": [
     {
       "peer": "g-load HK1",
