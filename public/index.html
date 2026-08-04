@@ -27,20 +27,11 @@
 
 <section>
   <h2>Our Nodes</h2>
-  <table class="dot-table connections-table">
+          <table class="dot-table connections-table">
     <thead>
       <tr><th>Node</th><th>ASN</th><th>Location</th><th>DN42 addresses</th><th>Role</th><th>Status</th></tr>
     </thead>
-    <tbody>
-      <tr>
-        <td><code>ovh-pl</code></td>
-        <td><code>AS4242423987</code></td>
-        <td>Poland</td>
-        <td><code>172.20.130.2</code><br><code>fd3a:7c91:5e2b::2</code></td>
-        <td>Transit</td>
-        <td>WireGuard config generated</td>
-      </tr>
-    </tbody>
+            <tbody id="node-list"><tr><td colspan="6">Loading node data...</td></tr></tbody>
   </table>
 </section>
 
@@ -154,29 +145,7 @@
           <thead>
             <tr><th>Peer</th><th>ASN</th><th>Location</th><th>Transport / BGP</th><th>Status</th></tr>
           </thead>
-          <tbody>
-            <tr>
-              <td><a href="https://dn42.g-load.eu/" rel="noopener noreferrer">g-load HK1</a></td>
-              <td><code>AS4242423914</code></td>
-              <td>Hong Kong</td>
-              <td>WireGuard / IPv6 link-local</td>
-              <td><strong class="ok">Established</strong></td>
-            </tr>
-            <tr>
-              <td>tmpfs HKG-01</td>
-              <td><code>AS4242423310</code></td>
-              <td>Hong Kong</td>
-              <td>WireGuard / MP-BGP ENH</td>
-        <td><strong class="ok">Established</strong></td>
-            </tr>
-            <tr>
-              <td><a href="https://grc-hk.iedon.net" rel="noopener noreferrer">IEDON HKG Route Collector</a></td>
-              <td><code>AS4242422189</code></td>
-              <td>Hong Kong</td>
-              <td>WireGuard / MP-BGP ENH</td>
-        <td><strong class="ok">Established</strong></td>
-            </tr>
-          </tbody>
+          <tbody id="connection-list"><tr><td colspan="5">Loading peer data...</td></tr></tbody>
         </table>
       </section>
 
