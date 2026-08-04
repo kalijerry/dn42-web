@@ -13,7 +13,7 @@
       "wireguard_public_key": "uwIrmqLN27GkZ6IZi5hmhNQDGYsDnhtQV0Sen5YFZRc=",
       "listen_port": 51820,
       "transit": true,
-      "status": "WireGuard config generated"
+      "status": "Established"
     },
     {
       "name": "aiyun-de",
