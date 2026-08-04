@@ -16,9 +16,9 @@
       "status": "WireGuard config generated"
     },
     {
-      "name": "aiyun178277605987",
+      "name": "aiyun-de",
       "asn": "AS4242423987",
-      "location": "Europe (unconfirmed)",
+      "location": "DE",
       "endpoint": "82.139.194.175:51820",
       "dn42_ipv4": "172.20.130.3",
       "dn42_ipv6": "fd3a:7c91:5e2b::3",
