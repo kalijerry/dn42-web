@@ -1,0 +1,19 @@
+{
+  "asn": "AS4242423914",
+  "name": "g-load HK1",
+  "network": "g-load",
+  "location": "Hong Kong",
+  "website": "https://dn42.g-load.eu/",
+  "contact": null,
+  "status": "active",
+  "transport": "wireguard",
+  "endpoint": "hk1.g-load.eu:20041",
+  "wireguard_public_key": "sLbzTRr2gfLFb24NPzDOpy8j09Y6zI+a7NkeVMdVSR8=",
+  "peer_tunnel_ipv4": "172.20.53.105",
+  "peer_tunnel_ipv6": "fe80::ade0",
+  "local_tunnel_ipv4": "172.20.130.1",
+  "local_tunnel_ipv6": "fe80::3987",
+  "mtu": 1420,
+  "bgp": "IPv6 link-local BGP",
+  "notes": "IPv6 BGP Established; IPv4 BGP is not enabled by this peer."
+}
