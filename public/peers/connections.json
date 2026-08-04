@@ -32,7 +32,7 @@
       "location": "Hong Kong",
       "transport": "WireGuard",
       "bgp": "MP-BGP / Extended Next Hop",
-      "status": "Pending key update",
+      "status": "Established",
       "website": null
     },
     {
@@ -41,7 +41,7 @@
       "location": "Hong Kong",
       "transport": "WireGuard",
       "bgp": "MP-BGP / Extended Next Hop",
-      "status": "Pending authorization",
+      "status": "Established",
       "website": "https://grc-hk.iedon.net"
     }
   ]
