@@ -19,6 +19,7 @@ jobs:
           STATUS: ${{ github.event.client_payload.status }}
         run: |
           node -e 'const fs=require("fs"); const value={status:process.env.STATUS,run_id:Number(process.env.RUN_ID),infra_commit:process.env.SHA,updated_at:new Date().toISOString()}; fs.mkdirSync("public/peers",{recursive:true}); fs.writeFileSync("public/peers/infra-status.json",JSON.stringify(value,null,2)+"\n")'
+          curl --fail --location --silent --show-error https://raw.githubusercontent.com/kalijerry/dn42-infra/main/peering/peers.json -o public/peers/infra-peers.json
       - name: Commit status
         run: |
           git config user.name github-actions[bot]
