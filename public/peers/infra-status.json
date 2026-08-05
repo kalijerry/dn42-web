@@ -1,6 +1,6 @@
 {
-  "status": "unknown",
-  "run_id": null,
-  "infra_commit": null,
-  "updated_at": null
+  "status": "success",
+  "run_id": 30962010909,
+  "infra_commit": "9ec705fe4c51c30d9269efd218252b5e99a99711",
+  "updated_at": "2026-08-05T00:03:20.338Z"
 }
